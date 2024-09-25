@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      /* 添加媒体查询，当屏幕宽度小于 600px 时，图片将垂直排列 */
+      @media (max-width: 600px) {
+        .image-row {
+          flex-direction: column; /* 改为竖直方向排列 */
+        }
+        .image-row img {
+          width: 100%; /* 图片宽度自适应屏幕 */
+          height: auto; /* 保持图片的纵横比 */
+        }
+      }
+    </style>
   </head>
   <body>
     <div style="background-color: bisque; text-align: center; padding: 15px">
@@ -21,19 +33,18 @@
         margin: 30px auto;
         padding: 15px;
         line-height: 1.7;
-        font-family: 'KaiTi', 'Times New Roman', serif; /* 设置默认字体为楷体和Times New Roman */
-        text-align: center; /* 图片居中 */
+        font-family: 'KaiTi', 'Times New Roman', serif;
+        text-align: center;
       "
     >
       <p
         style="
-          text-indent: 2em; /* 首行缩进两个字符 */
-          font-family: 'KaiTi', 'Times New Roman', serif; /* 中文使用楷体，英文使用Times */
-          text-align: left; /* 段落文本保持左对齐 */
+          text-indent: 2em;
+          font-family: 'KaiTi', 'Times New Roman', serif;
+          text-align: left;
         "
       >
-        高良姜(Alpinia
-        officinarum)为姜科植物，是益智仁属的模式种之一。高良姜原产于中国，其在中国国内分布于广东、海南、广西、福建等省份。高良姜在东南亚地区被用作食品香料和添加剂，它在传统的医学治疗中也被广泛应用。例如在传统的中药中，高良姜被用于缓解胃疼、感冒和止吐。在最近的研究中，高良姜已被多项研究鉴定并且报道了其药理作用，如抗炎、抗氧化、抗菌活性、抗癌、舒张血管以及抗高血脂作用。然而，前期对于高良姜的研究仅仅集中在对其的化学成分进行分析，研究其的药代动力学和药理学。对高良姜基因组方面的研究却很少。
+        高良姜(Alpinia officinarum)为姜科植物，是益智仁属的模式种之一。高良姜原产于中国，其在中国国内分布于广东、海南、广西、福建等省份。高良姜在东南亚地区被用作食品香料和添加剂，它在传统的医学治疗中也被广泛应用。例如在传统的中药中，高良姜被用于缓解胃疼、感冒和止吐。在最近的研究中，高良姜已被多项研究鉴定并且报道了其药理作用，如抗炎、抗氧化、抗菌活性、抗癌、舒张血管以及抗高血脂作用。然而，前期对于高良姜的研究仅仅集中在对其的化学成分进行分析，研究其的药代动力学和药理学。对高良姜基因组方面的研究却很少。
       </p>
 
       <img
@@ -46,19 +57,16 @@
 
       <p
         style="
-          text-indent: 2em; /* 首行缩进两个字符 */
-          font-family: 'KaiTi', 'Times New Roman', serif; /* 中文使用楷体，英文使用Times */
-          text-align: left; /* 段落文本保持左对齐 */
+          text-indent: 2em;
+          font-family: 'KaiTi', 'Times New Roman', serif;
+          text-align: left;
         "
       >
-        我们通过Illumina测序、PacBio技术和Hi-C（高通量染色体构象捕获）技术对高良姜的基因组进行了测序。使用Hifiasm和Khaper软件对基因组进行组装以及抛光，获得了2.44Gb大小的contig级别基因组，随后使用Hi-C数据进行染色体挂载最后，我们得到了包含
-        24 条染色体的高良姜染色体级基因组，contig N50 为 28.28 Mb，scaffold N50
-        为 118.36
-        Mb。比较基因组分析表明，高良姜和生姜于在约2200万年前发生了分化。
+        我们通过Illumina测序、PacBio技术和Hi-C（高通量染色体构象捕获）技术对高良姜的基因组进行了测序。使用Hifiasm和Khaper软件对基因组进行组装以及抛光，获得了2.44Gb大小的contig级别基因组，随后使用Hi-C数据进行染色体挂载最后，我们得到了包含24条染色体的高良姜染色体级基因组，contig N50为28.28Mb，scaffold N50为118.36Mb。比较基因组分析表明，高良姜和生姜于在约2200万年前发生了分化。
       </p>
 
-      <!-- 使用 flexbox 布局来让图片并排 -->
-      <div style="display: flex; justify-content: center; align-items: center">
+      <!-- 使用 flexbox 布局让图片并排 -->
+      <div class="image-row" style="display: flex; justify-content: center; align-items: center">
         <img
           src="https://github.com/yuanlilong/ryan1/blob/main/circos.png?raw=true"
           alt="circos"
@@ -85,8 +93,7 @@
       "
     >
       <p>高良姜 Alpinia officinarum</p>
-      <a
-        href="https://cbi.gxu.edu.cn/download_files/AlpiniaOfficinarum/Ao_final.fasta"
+      <a href="https://cbi.gxu.edu.cn/download_files/AlpiniaOfficinarum/Ao_final.fasta"
         >高良姜基因组链接</a
       >
     </div>
